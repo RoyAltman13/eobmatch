@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EOB Match: Is My Medical Bill Right?</title>
+<meta name="description" content="EOB Match compares your medical bill with your insurance plan's Explanation of Benefits and explains what you owe in plain English. Private: everything stays on your iPhone.">
+<style>
+  :root { --bg:#ffffff; --text:#1d1d1f; --muted:#6e6e73; --accent:#0a66c2; --accent-soft:#e8f1fb;
+          --card:#f5f5f7; --good:#1a7f37; --warn:#b35900; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#000000; --text:#f5f5f7; --muted:#a1a1a6; --accent:#4da3ff; --accent-soft:#0d2238;
+            --card:#1c1c1e; --good:#3fb950; --warn:#f0a050; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+         font:17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .wrap { max-width:960px; margin:0 auto; padding:0 20px; }
+  header.hero { padding:72px 0 48px; text-align:center; }
+  .eyebrow { display:inline-block; background:var(--accent-soft); color:var(--accent);
+             font-weight:600; font-size:0.85rem; padding:6px 12px; border-radius:999px; margin-bottom:18px; }
+  h1 { font-size:clamp(2.2rem, 6vw, 3.4rem); line-height:1.1; margin:0 0 14px; letter-spacing:-0.02em; }
+  .lede { font-size:1.2rem; color:var(--muted); max-width:640px; margin:0 auto 28px; }
+  .badge { display:inline-block; border:1.5px solid var(--text); border-radius:12px; padding:10px 20px;
+           font-weight:600; color:var(--text); text-decoration:none; }
+  .badge small { display:block; font-weight:400; font-size:0.75rem; color:var(--muted); }
+
+  .verdicts { display:grid; gap:12px; max-width:520px; margin:44px auto 0; text-align:left; }
+  .verdict { background:var(--card); border-radius:14px; padding:14px 18px; display:flex; gap:12px; align-items:flex-start; }
+  .dot { width:12px; height:12px; border-radius:50%; margin-top:7px; flex:none; }
+  .verdict strong { display:block; }
+  .verdict span { color:var(--muted); font-size:0.95rem; }
+
+  section { padding:48px 0; }
+  h2 { font-size:1.8rem; margin:0 0 8px; text-align:center; letter-spacing:-0.01em; }
+  .sub { text-align:center; color:var(--muted); margin:0 auto 32px; max-width:600px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; }
+  .grid.two { grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); }
+  .card { background:var(--card); border-radius:16px; padding:22px; }
+  .card h3 { margin:0 0 8px; font-size:1.1rem; }
+  .card p { margin:0; color:var(--muted); font-size:0.98rem; }
+  .num { display:inline-flex; width:30px; height:30px; border-radius:50%; background:var(--accent);
+         color:#fff; font-weight:700; align-items:center; justify-content:center; margin-bottom:10px; }
+
+  .privacy { background:var(--accent-soft); border-radius:20px; padding:36px 28px; text-align:center; }
+  .privacy h2 { margin-bottom:10px; }
+  .privacy ul { list-style:none; padding:0; margin:18px 0 0; display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+  .privacy li { background:var(--bg); border-radius:999px; padding:8px 16px; font-weight:600; font-size:0.95rem; }
+
+  .fine { color:var(--muted); font-size:0.9rem; text-align:center; max-width:640px; margin:0 auto; }
+  footer { border-top:1px solid var(--card); padding:28px 0 40px; margin-top:24px; color:var(--muted);
+           font-size:0.9rem; text-align:center; }
+  footer a { color:var(--accent); margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">For iPhone</div>
+    <h1>Is my medical bill right?</h1>
+    <p class="lede">EOB Match puts your provider's bill next to your insurance plan's Explanation of Benefits and shows you, in plain English, why you owe what you owe — and what to do if something doesn't add up.</p>
+    <span class="badge">Coming soon<small>on the App Store</small></span>
+
+    <div class="verdicts" aria-label="Example results">
+      <div class="verdict"><div class="dot" style="background:var(--good)"></div>
+        <div><strong>This bill looks right</strong><span>It matches what your EOB says you may owe.</span></div></div>
+      <div class="verdict"><div class="dot" style="background:var(--warn)"></div>
+        <div><strong>Hold off: insurance isn't applied yet</strong><span>The bill shows the full charge. Here's who to call and what to say.</span></div></div>
+      <div class="verdict"><div class="dot" style="background:var(--accent)"></div>
+        <div><strong>No EOB yet?</strong><span>The claim may still be processing — or may never have been sent. Here's how to find out.</span></div></div>
+    </div>
+  </header>
+
+  <section>
+    <h2>How it works</h2>
+    <p class="sub">Three steps, a few minutes, no jargon.</p>
+    <div class="grid">
+      <div class="card"><div class="num">1</div><h3>Add your bill</h3>
+        <p>Import a PDF, scan the paper bill with your camera, or pick a photo.</p></div>
+      <div class="card"><div class="num">2</div><h3>Add your EOB</h3>
+        <p>Not sure where to find it? The app shows you how to get it from your plan and how to read it.</p></div>
+      <div class="card"><div class="num">3</div><h3>Get a clear answer</h3>
+        <p>See the verdict, how the billed amount became what you owe, and your next steps.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Built around your plan</h2>
+    <p class="sub">Most bills are correct. The confusing part is your share. EOB Match explains it.</p>
+    <div class="grid two">
+      <div class="card"><h3>Your plan's numbers</h3>
+        <p>Import your plan's Summary of Benefits and Coverage so explanations use your real copays, coinsurance and deductible.</p></div>
+      <div class="card"><h3>Year-to-date totals</h3>
+        <p>Track how much of your deductible and out-of-pocket maximum you've met, including family totals.</p></div>
+      <div class="card"><h3>Call scripts</h3>
+        <p>Know exactly what to say to the billing office or your plan when something doesn't match.</p></div>
+      <div class="card"><h3>Plain-English answers</h3>
+        <p>On iPhones with Apple Intelligence, ask follow-up questions. The math always comes from the app's own calculations, never guessed by AI.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="privacy">
+      <h2>Private by design</h2>
+      <p class="sub" style="margin-bottom:0">Your bills and EOBs never leave your iPhone. They're stored encrypted on your device, and you can erase them any time.</p>
+      <ul><li>No account</li><li>No server</li><li>No ads</li><li>No tracking</li></ul>
+    </div>
+  </section>
+
+  <p class="fine">EOB Match is an educational tool. It is not affiliated with any insurance company or provider and does not provide legal, financial or medical advice. Available in the United States. Requires iOS 17 or later.</p>
+
+  <footer>
+    &copy; 2026 Roy Altman
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="mailto:roy.altman@outlook.com">Contact</a>
+  </footer>
+
+</div>
+</body>
+</html>
